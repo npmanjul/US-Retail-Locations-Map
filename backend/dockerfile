@@ -10,6 +10,8 @@ RUN pnpm install
 
 COPY . .
 
+RUN pnpm build
+
 EXPOSE 8000
 
-CMD ["pnpm", "run", "dev"]
+CMD ["node", "dist/index.js"]
